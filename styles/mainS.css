@@ -9,6 +9,16 @@
     font-family: "Source Code Pro", "Trebuchet MS", sans-serif;
 }
 
+body {
+    background-color: #0D0D0F;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .headings {
     font-family: "Libre Baskerville", Georgia, serif;
     color: #E8E3D2;
@@ -21,21 +31,45 @@
 /* ----------- BANNER STYLING ----------- */
 header {
     background-color: #0D0D0F;
-    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #BFA66B22;
 }
 
 nav {
     background-color: #1A1A1E;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #BFA66B;
+    transition: 0.3s ease;
 }
 
 /* ----------- MAIN STYLING ----------- */
 main {
     background-color: #0D0D0F;
     padding: 30px;
+    max-width: 900px;
+    margin: auto;
 }
 
 /* ----------- FOOTER STYLING ----------- */
 footer {
     background-color: #1A1A1E;
     padding-top: 10px;
+    border-top: 1px solid #BFA66B22;
 }
