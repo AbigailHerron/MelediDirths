@@ -1,12 +1,16 @@
+/* ############ IMPORTS ############ */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 /* ############ DEFAULT STYLING ############ */
 * {
     margin: 0px;
     border: 0px;
     padding: 0px;
     color: #A8A7A2;
+    font-family: "Source Code Pro", "Trebuchet MS", sans-serif;
 }
 
 .headings {
+    font-family: "Libre Baskerville", Georgia, serif;
     color: #E8E3D2;
 }
 
