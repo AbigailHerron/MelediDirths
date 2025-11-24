@@ -100,6 +100,12 @@ main {
 /* ----------- FOOTER STYLING ----------- */
 footer {
     background-color: #1A1A1E;
-    padding-top: 10px;
-    border-top: 1px solid #BFA66B22;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #BFA66B22; /* subtle gold accent */
+}
+
+footer p {
+    color: #A8A7A2;
+    font-size: 0.9rem;
 }
