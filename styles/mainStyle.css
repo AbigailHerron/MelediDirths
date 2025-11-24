@@ -71,6 +71,7 @@ main {
 main > section {
     padding-top: 80px;
     padding-bottom: 80px;
+    min-height: 45vh;
 }
 
 /* ---------- HERO SECTION ---------- */
@@ -135,6 +136,12 @@ main > section {
 
 .social-links a:hover {
     color: #E8E3D2;
+}
+
+.about-preview,
+.projects-preview {
+    max-width: 900px;
+    margin: auto;
 }
 
 /* ---------- PROJECT PREVIEW SECTION ---------- */
