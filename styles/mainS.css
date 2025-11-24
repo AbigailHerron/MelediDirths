@@ -67,10 +67,16 @@ main {
     margin: auto;
 }
 
+/* General section spacing */
+main > section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 /* ---------- HERO SECTION ---------- */
 .hero {
     text-align: center;
-    padding: 120px 20px 80px;
+    padding: 120px 20px 100px 0px;
     animation: fadeIn 1.2s ease-out;
 }
 
@@ -100,7 +106,7 @@ main {
 /* ---------- ABOUT PREVIEW SECTION ---------- */
 .about-preview {
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 20px 100px 20px;
     max-width: 800px;
     margin: auto;
 }
@@ -134,7 +140,7 @@ main {
 /* ---------- PROJECT PREVIEW SECTION ---------- */
 .projects-preview {
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 20px 100px 20px;
     max-width: 1000px;
     margin: auto;
 }
