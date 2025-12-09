@@ -119,23 +119,39 @@ main > section {
     margin-bottom: 20px;
 }
 
+.about-preview h2.headings {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-preview h2.headings::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #BFA66B;
+    margin-top: 5px;
+}
+
 .about-text {
     color: #A8A7A2;
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 25px;
+    line-height: 1.7;
 }
 
 .social-links a {
     color: #BFA66B;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 0 10px;
     font-weight: 500;
     transition: 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #E8E3D2;
+    color: #E8E3D2; /* ivory highlight on hover */
+    transition: color 0.3s ease;
 }
 
 .about-preview,
@@ -164,11 +180,13 @@ main > section {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    padding: 0 10px;
 }
 
 .card {
     background-color: #1A1A1E;
     border: 1px solid #BFA66B22;
+    border-radius: 2px;
     padding: 30px 20px;
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -186,10 +204,19 @@ main > section {
     margin-bottom: 10px;
 }
 
+.card-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #BFA66B;
+    margin: 6px auto 12px auto;
+}
+
 .card-desc {
     color: #A8A7A2;
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 /* Pulse animation */
