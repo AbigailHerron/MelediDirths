@@ -78,7 +78,13 @@ main > section {
 .hero {
     text-align: center;
     padding: 120px 20px 100px 0px;
+    background-color: #0D0D0F;
     animation: fadeIn 1.2s ease-out;
+}
+
+.hero h1.headings {
+    font-size: 2.5rem;
+    color: #E8E3D2;
 }
 
 .author-name {
@@ -242,6 +248,37 @@ main > section {
     transition: color 0.3s ease;
 }
 
+/* ---------- FEATURED + COMING SOON ---------- */
+.projects-featured,
+.projects-coming-soon {
+    text-align: center;
+    padding: 80px 20px 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.projects-featured h2,
+.projects-coming-soon h2 {
+    font-family: "Libre Baskerville", Georgia, serif;
+    color: #E8E3D2;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Reuse existing project card styles for consistency */
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+/* Optional subtle divider between sections */
+.projects-featured,
+.projects-coming-soon {
+    border-top: 1px solid #BFA66B22;
+}
 
 /* ----------- FOOTER STYLING ----------- */
 footer {
