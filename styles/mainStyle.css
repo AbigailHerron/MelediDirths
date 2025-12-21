@@ -231,6 +231,11 @@ main > section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px #BFA66B22;
