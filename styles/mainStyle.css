@@ -1,10 +1,11 @@
 /* ############ IMPORTS ############ */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-/* ############ DEFAULT STYLING ############ */
+
+/* ############ RESET + BASE ############ */
 * {
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
     color: #A8A7A2;
     font-family: "Source Code Pro", "Trebuchet MS", sans-serif;
 }
@@ -19,6 +20,7 @@ body {
     to { opacity: 1; }
 }
 
+/* ############ UTILITIES ############ */
 .headings {
     font-family: "Libre Baskerville", Georgia, serif;
     color: #E8E3D2;
@@ -28,16 +30,28 @@ body {
     color: #BFA66B;
 }
 
-/* ----------- BANNER STYLING ----------- */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.container-wide {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+/* ############ NAV ############ */
 header {
-    background-color: #0D0D0F;
-    padding-bottom: 10px;
     border-bottom: 1px solid #BFA66B22;
 }
 
 nav {
     background-color: #1A1A1E;
-    margin-bottom: 10px;
 }
 
 nav ul {
@@ -48,93 +62,43 @@ nav ul {
     padding: 10px 0;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
     padding: 10px 15px;
-    display: inline-block;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #BFA66B;
     transition: 0.3s ease;
 }
 
-/* ----------- MAIN STYLING ----------- */
+/* ############ MAIN ############ */
 main {
-    background-color: #0D0D0F;
     padding: 30px;
-    max-width: 900px;
-    margin: auto;
 }
 
-/* General section spacing */
+/* General section height rhythm */
 main > section {
-    padding-top: 80px;
-    padding-bottom: 80px;
     min-height: 45vh;
 }
 
-/* ---------- HERO SECTION ---------- */
+/* ############ HERO ############ */
 .hero {
-    text-align: center;
-    padding: 120px 20px 100px 0px;
-    background-color: #0D0D0F;
-    animation: fadeIn 1.2s ease-out;
+    padding: 120px 20px 50px;
 }
-
-.hero h1.headings {
-    font-size: 2.5rem;
-    color: #E8E3D2;
-}
-
-/* ---------- PROJECT PAGES ---------- */
-
-.project-hero {
-    text-align: center;
-    padding: 100px 20px 60px;
-    background-color: #0D0D0F;
-}
-
-.project-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.project-status {
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-.project-content {
-    max-width: 700px;
-    margin: auto;
-    padding: 60px 20px 100px;
-    text-align: center;
-}
-
-.project-content p {
-    color: #A8A7A2;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-/* ---------- */
 
 .author-name {
     font-size: 3.5rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    color: #E8E3D2;
 }
 
 .tagline {
     font-size: 1.3rem;
     font-style: italic;
-    color: #A8A7A2;
     margin-bottom: 25px;
 }
 
-/* Thin gold separator */
 .gold-line {
     width: 180px;
     height: 1px;
@@ -143,41 +107,11 @@ main > section {
     opacity: 0.7;
 }
 
-/* ---------- ABOUT PREVIEW SECTION ---------- */
-.about-preview {
-    text-align: center;
-    padding: 80px 20px 100px 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.about-preview h2 {
-    font-family: "Libre Baskerville", Georgia, serif;
-    color: #E8E3D2;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about-preview h2.headings {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.about-preview h2.headings::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background-color: #BFA66B;
-    margin-top: 5px;
-}
-
+/* ############ ABOUT PREVIEW ############ */
 .about-text {
-    color: #A8A7A2;
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 25px;
-    line-height: 1.7;
 }
 
 .social-links a {
@@ -185,35 +119,22 @@ main > section {
     text-decoration: none;
     margin: 0 10px;
     font-weight: 500;
-    transition: 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #E8E3D2; /* ivory highlight on hover */
-    transition: color 0.3s ease;
-}
-
-.about-preview,
-.projects-preview {
-    max-width: 900px;
-    margin: auto;
-}
-
-/* ---------- PROJECT PREVIEW SECTION ---------- */
-.projects-preview {
-    text-align: center;
-    padding: 80px 20px 100px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.projects-preview h2 {
-    font-family: "Libre Baskerville", Georgia, serif;
     color: #E8E3D2;
-    font-size: 2rem;
-    margin-bottom: 40px;
 }
 
+/* Heading underline accent */
+.section h2.headings::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #BFA66B;
+    margin: 20px auto;
+}
+
+/* ############ PROJECT CARDS ############ */
 .project-cards {
     display: flex;
     justify-content: center;
@@ -222,23 +143,16 @@ main > section {
     padding: 0 10px;
 }
 
+.card-link {
+    text-decoration: none;
+}
+
 .card {
     background-color: #1A1A1E;
     border: 1px solid #BFA66B22;
-    border-radius: 2px;
     padding: 30px 20px;
     width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-link {
-    text-decoration: none;
-    display: inline-block;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px #BFA66B22;
+    transition: transform 0.3s ease;
 }
 
 .card-title {
@@ -253,27 +167,18 @@ main > section {
     display: block;
     height: 1px;
     background-color: #BFA66B;
-    margin: 6px auto 12px auto;
+    margin: 6px auto 12px;
 }
 
 .card-desc {
-    color: #A8A7A2;
     font-size: 0.95rem;
     line-height: 1.5;
-    margin-bottom: 15px;
 }
 
-/* Pulse animation */
 @keyframes pulseGlow {
-    0% {
-        box-shadow: 0 0 10px #BFA66B33;
-    }
-    50% {
-        box-shadow: 0 0 20px #BFA66B55;
-    }
-    100% {
-        box-shadow: 0 0 10px #BFA66B33;
-    }
+    0% { box-shadow: 0 0 10px #BFA66B33; }
+    50% { box-shadow: 0 0 20px #BFA66B55; }
+    100% { box-shadow: 0 0 10px #BFA66B33; }
 }
 
 .card:hover {
@@ -283,50 +188,63 @@ main > section {
 
 .card:hover .card-title {
     color: #BFA66B;
-    transition: color 0.3s ease;
 }
 
-/* ---------- FEATURED + COMING SOON ---------- */
-.projects-featured,
-.projects-coming-soon {
-    text-align: center;
-    padding: 80px 20px 100px 20px;
-    max-width: 1000px;
+/* ############ ABOUT PAGE ############ */
+.intro {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+.about-body {
+    max-width: 700px;
     margin: auto;
+    padding: 40px 20px 80px;
 }
 
-.projects-featured h2,
-.projects-coming-soon h2 {
-    font-family: "Libre Baskerville", Georgia, serif;
-    color: #E8E3D2;
-    font-size: 2rem;
-    margin-bottom: 40px;
+.about-body p {
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
-/* Reuse existing project card styles for consistency */
-.project-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 0 10px;
+.about-socials {
+    text-align: center;
+    padding-bottom: 100px;
 }
 
-/* Optional subtle divider between sections */
-.projects-featured,
-.projects-coming-soon {
-    border-top: 1px solid #BFA66B22;
+/* ############ PROJECT PAGES ############ */
+.project-hero {
+    text-align: center;
+    padding: 100px 20px 60px;
 }
 
-/* ----------- FOOTER STYLING ----------- */
+.project-hero h1 {
+    font-size: 2.5rem;
+}
+
+.project-content {
+    max-width: 700px;
+    margin: auto;
+    padding: 60px 20px 100px;
+    text-align: center;
+}
+
+.project-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* ############ FOOTER ############ */
 footer {
     background-color: #1A1A1E;
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #BFA66B22; /* subtle gold accent */
+    border-top: 1px solid #BFA66B22;
 }
 
 footer p {
-    color: #A8A7A2;
     font-size: 0.9rem;
 }
