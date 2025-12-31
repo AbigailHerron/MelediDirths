@@ -283,3 +283,9 @@ footer p {
     font-size: 1.05rem;
     line-height: 1.7;
 }
+
+#post-content p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
