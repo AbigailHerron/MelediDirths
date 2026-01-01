@@ -46,8 +46,10 @@ if (posts[postKey]) {
 
 } else {
     // 5. Fallback if URL is wrong
-    titleEl.textContent = "Post not found";
+    titleEl.textContent = "Blog Post";
     metaEl.textContent = "";
-    contentEl.innerHTML =
-        "<p>This post doesn’t exist yet.</p>";
+    contentEl.innerHTML = `
+        <p>This page displays individual blog posts.</p>
+        <p>Please return to the blog to choose an article.</p>
+    `;
 }
