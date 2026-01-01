@@ -3,7 +3,7 @@ const posts = {
     "slow-stories": {
         title: "On Slow Stories",
         meta: "March 2025",
-        file: "../posts/slow-stories.html"
+        file: "posts/slow-stories.html"
     },
     "quiet-worlds": {
         title: "Building Quiet Worlds",
