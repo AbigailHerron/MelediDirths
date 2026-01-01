@@ -1,47 +1,53 @@
+// 1. Post metadata only
 const posts = {
     "slow-stories": {
         title: "On Slow Stories",
         meta: "March 2025",
-        content: `
-            <p>Some stories don’t want to be rushed.</p>
-
-            <p>
-                They unfold in pauses, in atmosphere, in what’s left unsaid.
-                They ask the reader not for speed, but for attention.
-            </p>
-
-            <p>
-                Writing slowly isn’t indulgence — it’s fidelity to the kind of
-                story being told.
-            </p>
-        `
+        file: "../posts/slow-stories.html"
     },
-
     "quiet-worlds": {
         title: "Building Quiet Worlds",
         meta: "February 2025",
-        content: `
-            <p>
-                Worldbuilding doesn’t always live in maps and histories.
-            </p>
-
-            <p>
-                Sometimes it’s in habit. In silence. In the way characters
-                move through familiar spaces.
-            </p>
-        `
+        file: "../posts/quiet-worlds.html"
     }
 };
 
+// 2. Get ?post= value from URL
 const params = new URLSearchParams(window.location.search);
 const postKey = params.get("post");
 
+// 3. Grab DOM elements once
+const titleEl = document.getElementById("post-title");
+const metaEl = document.getElementById("post-meta");
+const contentEl = document.getElementById("post-content");
+
+// 4. If post exists, load it
 if (posts[postKey]) {
-    document.getElementById("post-title").innerText = posts[postKey].title;
-    document.getElementById("post-meta").innerText = posts[postKey].meta;
-    document.getElementById("post-content").innerHTML = posts[postKey].content;
+    const post = posts[postKey];
+
+    titleEl.textContent = post.title;
+    metaEl.textContent = post.meta;
+
+    fetch(post.file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Post file not found");
+            }
+            return response.text();
+        })
+        .then(html => {
+            contentEl.innerHTML = html;
+        })
+        .catch(error => {
+            contentEl.innerHTML =
+                "<p>Sorry, this post couldn’t be loaded.</p>";
+            console.error(error);
+        });
+
 } else {
-    document.getElementById("post-title").innerText = "Post not found";
-    document.getElementById("post-content").innerHTML =
+    // 5. Fallback if URL is wrong
+    titleEl.textContent = "Post not found";
+    metaEl.textContent = "";
+    contentEl.innerHTML =
         "<p>This post doesn’t exist yet.</p>";
 }
