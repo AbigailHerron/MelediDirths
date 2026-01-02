@@ -58,6 +58,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-brand {
+    padding-left: 0.6rem;
 }
 
 .nav-toggle {
@@ -313,18 +319,20 @@ footer p {
 
     .nav-toggle {
         display: block;
+        margin-right: 0.5rem;
     }
 
     .nav-links {
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background: #0D0D0F; 
+        background: #1A1A1E;
         flex-direction: column;
         align-items: center;
         display: none;
         padding: 1.5rem 0;
+        z-index: 1001;
     }
 
     .nav-links.active {
@@ -333,5 +341,9 @@ footer p {
 
     .nav-links li {
         margin: 1rem 0;
+    }
+
+    nav ul li {
+        font-size: 1.2rem;
     }
 }
