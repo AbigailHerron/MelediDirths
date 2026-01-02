@@ -64,6 +64,8 @@ nav {
 
 .nav-brand {
     padding-left: 0.6rem;
+    font-size: 0.8rem;
+    color:#a8a7a280
 }
 
 .nav-toggle {
