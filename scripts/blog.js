@@ -12,7 +12,8 @@ fetch("posts.json")
     const postEntries = Object.entries(posts);
 
     // Sort by date descending (latest first)
-    postEntries.sort(([, a], [, b]) => new Date(b.meta) - new Date(a.meta));
+    postEntries.sort(([, a], [, b]) => new Date(b.date) - new Date(a.date));
+
 
     // Clear existing content (if any)
     blogContainer.innerHTML = "";
