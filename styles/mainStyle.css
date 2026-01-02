@@ -289,3 +289,10 @@ footer p {
     line-height: 1.8;
     font-size: 1.05rem;
 }
+
+.blog-post.highlight-latest {
+  border: 2px solid #f08;
+  background-color: #fff0f5;
+  padding: 10px;
+  border-radius: 6px;
+}

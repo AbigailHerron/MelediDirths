@@ -2,11 +2,13 @@
   "slow-stories": {
     "title": "On Slow Stories",
     "meta": "March 2025",
-    "contentFile": "posts/slow-stories.html"
+    "contentFile": "posts/slow-stories.html",
+    "excerpt": "Some stories don’t want to be rushed. They unfold in pauses, in atmosphere, in what’s left unsaid."
   },
   "quiet-worlds": {
     "title": "Building Quiet Worlds",
     "meta": "February 2025",
-    "contentFile": "posts/quiet-worlds.html"
+    "contentFile": "posts/quiet-worlds.html",
+    "excerpt": "Worldbuilding doesn’t always need maps and lore. Sometimes it lives in tone, habit, and silence."
   }
 }
