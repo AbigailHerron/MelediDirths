@@ -42,7 +42,7 @@ body {
 
 .section {
     text-align: center;
-    padding: 80px 20px 8vh;
+    padding: 60px 20px 8vh;
 }
 
 /* ############ NAV ############ */
@@ -110,7 +110,7 @@ main > section {
 
 /* ############ HERO ############ */
 .hero {
-    padding: 17vh 20px 8vh;
+    padding: 17vh 20px 4vh;
 }
 
 .author-name {
