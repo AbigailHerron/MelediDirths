@@ -1,43 +1,37 @@
-// Grab the container where posts will go
-const blogContainer = document.querySelector(".blog-list");
-
-// Fetch posts.json
-fetch("posts.json")
-  .then(response => {
-    if (!response.ok) throw new Error("Failed to load posts.json");
-    return response.json();
-  })
+fetch("data/posts.json")
+  .then(response => response.json())
   .then(posts => {
-    // Convert object to array for sorting
+    const blogList = document.querySelector(".blog-list");
+
+    // Convert object → array so we can sort
     const postEntries = Object.entries(posts);
 
-    // Sort by date descending (latest first)
+    // Sort by date (newest first)
     postEntries.sort(([, a], [, b]) => new Date(b.date) - new Date(a.date));
 
+    postEntries.forEach(([key, post]) => {
 
-    // Clear existing content (if any)
-    blogContainer.innerHTML = "";
+      // 🔹 AUTO-GENERATE META TEXT FROM DATE
+      const dateObj = new Date(post.date);
+      const metaText = dateObj.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long"
+      });
 
-    // Loop through posts and create article elements
-    postEntries.forEach(([slug, post], index) => {
       const article = document.createElement("article");
       article.classList.add("blog-post");
 
-      // Highlight the latest 3 posts
-      if (index < 3) article.classList.add("highlight-latest");
-
       article.innerHTML = `
         <h2 class="headings blog-title">
-          <a href="post.html?post=${slug}">${post.title}</a>
+          <a href="post.html?post=${key}">${post.title}</a>
         </h2>
-        <p class="blog-meta">${post.meta}</p>
-        <p class="blog-excerpt">${post.excerpt || ""}</p>
+        <p class="blog-meta">${metaText}</p>
+        <p class="blog-excerpt">${post.excerpt}</p>
       `;
 
-      blogContainer.appendChild(article);
+      blogList.appendChild(article);
     });
   })
-  .catch(err => {
-    console.error(err);
-    blogContainer.innerHTML = "<p>Could not load blog posts.</p>";
+  .catch(error => {
+    console.error("Error loading blog posts:", error);
   });
