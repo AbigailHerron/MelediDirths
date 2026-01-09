@@ -12,5 +12,12 @@
     "date": "2025-02-15",
     "contentFile": "posts/quiet-worlds.html",
     "excerpt": "Worldbuilding doesn’t always need maps and lore. Sometimes it lives in tone, habit, and silence."
+  },
+  "the-hard-line-in-the-sand": {
+    "title": "The Hard Line in the Sand",
+    "meta": "January 2026",
+    "date": "2026-01-09",
+    "contentFile": "posts/the-hard-line-in-the-sand.html",
+    "excerpt": "Everyone has something they won’t compromise on."
   }
 }
