@@ -140,15 +140,26 @@ main > section {
     margin-bottom: 25px;
 }
 
-.social-links a {
-    color: #BFA66B;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
+/* ---------- ICONS ---------- */
+.social-icon {
+    margin: 0 10px;          /* spacing */
+    display: inline-block;   /* ensures correct spacing */
 }
 
-.social-links a:hover {
-    color: #E8E3D2;
+.social-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;      /* enables hover color */
+    vertical-align: middle;
+}
+
+.social-icon svg path {
+    fill: #BFA66B; /* gold by default */
+    transition: fill 0.5s ease-in-out; /* smoother, half a second */
+}
+
+.social-icon:hover svg path {
+    fill: #E8E3D2; /* silver on hover */
 }
 
 /* Heading underline accent */
