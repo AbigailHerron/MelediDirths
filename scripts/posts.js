@@ -8,7 +8,7 @@ const metaEl = document.getElementById("post-meta");
 const contentEl = document.getElementById("post-content");
 
 // Fetch posts.json
-fetch("posts.json")
+fetch("data/posts.json")
   .then(response => {
     if (!response.ok) throw new Error("Failed to load posts.json");
     return response.json();
