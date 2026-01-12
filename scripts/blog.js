@@ -2,16 +2,13 @@ fetch("data/posts.json")
   .then(response => response.json())
   .then(posts => {
     const blogList = document.querySelector(".blog-list");
+    if (!blogList) return;
 
-    // Convert object → array so we can sort
     const postEntries = Object.entries(posts);
 
-    // Sort by date (newest first)
     postEntries.sort(([, a], [, b]) => new Date(b.date) - new Date(a.date));
 
     postEntries.forEach(([key, post]) => {
-
-      // 🔹 AUTO-GENERATE META TEXT FROM DATE
       const dateObj = new Date(post.date);
       const metaText = dateObj.toLocaleDateString("en-US", {
         year: "numeric",
