@@ -1,17 +1,17 @@
 {
   "slow-stories": {
     "title": "On Slow Stories",
-    "meta": "March 2025",
-    "date": "2025-03-01",
+    "meta": "November 2025",
+    "date": "2025-11-01",
     "contentFile": "posts/slow-stories.html",
     "excerpt": "Some stories don’t want to be rushed. They unfold in pauses, in atmosphere, in what’s left unsaid."
   },
-  "quiet-worlds": {
-    "title": "Building Quiet Worlds",
-    "meta": "February 2025",
-    "date": "2025-02-15",
-    "contentFile": "posts/quiet-worlds.html",
-    "excerpt": "Worldbuilding doesn’t always need maps and lore. Sometimes it lives in tone, habit, and silence."
+  "world-creation-magic": {
+    "title": "World Creation Magic",
+    "meta": "December 2025",
+    "date": "2025-12-15",
+    "contentFile": "posts/world-creation-magic.html",
+    "excerpt": "A world is more than an idea."
   },
   "hard-line": {
     "title": "The Hard Line In The Sand",
