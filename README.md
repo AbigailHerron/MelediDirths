@@ -1,3 +1,3 @@
 # MelediDirths
 Meledi's Author Website
-View for Live Testing: https://abigailherron.github.io/MelediDirths/
+View for Live Testing: http://www.meledidirths.com
