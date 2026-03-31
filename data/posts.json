@@ -19,5 +19,12 @@
     "date": "2026-01-09",
     "contentFile": "posts/hard-line.html",
     "excerpt": "Everyone has something they won’t compromise on."
+  },
+  "reality-of-burnout":{
+    "title": "The Reality Of Burnout",
+    "meta": "March 2026",
+    "date": "2026-03-31",
+    "contentFile": "posts/reality-of-burnout.html",
+    "excerpt": "You're doing just fine..."
   }
 }
